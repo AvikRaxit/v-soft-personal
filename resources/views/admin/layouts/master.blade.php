@@ -25,13 +25,16 @@
     @include('admin.layouts.sidebar')
     @include('admin.layouts.navbar')
     @yield('content')
-
+    
     <footer class="footer">
       <div class="container-fluid">
         <div class="row text-muted">
           <div class="col-6 text-start">
             <p class="mb-0">
-              <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Vareli Techsoft</strong></a> - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong></strong></a>2022&copy;
+              @php
+                $mytime = date('Y');
+              @endphp
+              <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Vareli Techsoft</strong></a> - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong></strong></a>{{$mytime}}&copy;
             </p>
           </div>
           <div class="col-6 text-end">
