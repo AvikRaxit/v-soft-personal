@@ -144,12 +144,12 @@
           </a>
 
           <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-            <img src="{{ asset('backend/img/avatars/avatar.jpg') }}" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+            <img src="{{ asset('backend/img/avatars/avatar.jpg') }}" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">{{$data->name}}</span>
           </a>
           <div class="dropdown-menu dropdown-menu-end">
             <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-in"></i> <span class="align-middle">Log out</a>
+            <a class="dropdown-item" href="{{route('logout')}}"><i class="align-middle me-1" data-feather="log-in"></i> <span class="align-middle">Log out</a>
           </div>
         </li>
       </ul>
