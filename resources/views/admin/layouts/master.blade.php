@@ -33,7 +33,7 @@
           <div class="col-6 text-start">
             <p class="mb-0">
               @php
-                $mytime = date('Y');
+                $mytime = date('d-m-Y');
               @endphp
               <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Vareli Techsoft</strong></a> - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong></strong></a>{{$mytime}}&copy;
             </p>

@@ -12,16 +12,17 @@
           <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
         </a>
       </li>
-
+      @if (session()->get('loginId')->role == 1)
       <li class="sidebar-item">
         <a class="sidebar-link" href="pages-profile.html">
-          <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+          <i class="align-middle" data-feather="user"></i> <span class="align-middle">User Manage</span>
         </a>
       </li>
+      @endif
       @if (session()->get('loginId')->role == 1)
       <li class="sidebar-item">
         <a class="sidebar-link" href="pages-sign-in.html">
-          <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
+          <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">User Manage</span>
         </a>
       </li>
       @endif
