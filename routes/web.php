@@ -10,7 +10,7 @@ Route::get('/', function () {
 });
 
 /*------------------Admin Route-------------------- */
-Route::prefix('CMS')->group(function () {
+Route::prefix('v-soft')->group(function () {
     Route::get('/', function () {
         return view('admin.auth.login');
     })->name('viewLogin');

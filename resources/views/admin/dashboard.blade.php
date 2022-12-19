@@ -4,7 +4,12 @@
 <main class="content">
   <div class="container-fluid p-0">
     <h1 class="h3 mb-3">
-      <strong>Analytics</strong> Dashboard
+      @if (session()->get('loginId')->role == 1)
+        Welcome to <strong>Admin</strong> Dashboard
+      @endif
+      @if (session()->get('loginId')->role == 0)
+        Welcome to <strong>HR</strong> Dashboard
+      @endif
     </h1>
     <div class="row">
       <div class="col-xl-6 col-xxl-5 d-flex">

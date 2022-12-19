@@ -33,6 +33,10 @@ class AdminContrller extends Controller
                     $request->session()->put('loginId', $admin);
                     return redirect()->route('dashboard');
                 }
+                elseif($admin->role == 0) {
+                    $request->session()->put('loginId', $admin);
+                    return redirect()->route('dashboard');
+                }
             }
             else {
                 return back();

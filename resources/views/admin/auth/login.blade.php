@@ -29,7 +29,7 @@
             <div class="text-center mt-4">
 							<h1 class="h2">Welcome </h1>
 							<p class="lead">
-								Login to Admin dashboard
+								Login to dashboard
 							</p>
 						</div>
 
