@@ -31,11 +31,11 @@ class AdminContrller extends Controller
             if(Hash::check($request->password, $admin->password)){
                 if($admin->role == 1) {
                     $request->session()->put('loginId', $admin);
-                    return redirect()->route('dashboard')->with('success', 'Login is successfull ! Thank you');
+                    return redirect()->route('dashboard');
                 }
                 elseif($admin->role == 0) {
                     $request->session()->put('loginId', $admin);
-                    return redirect()->route('dashboard')->with('success', 'Login is successfull ! Thank you');
+                    return redirect()->route('dashboard');
                 }
             }
             else {
