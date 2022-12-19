@@ -31,15 +31,12 @@ class AdminContrller extends Controller
             if(Hash::check($request->password, $admin->password)){
                 if($admin->role == 1) {
                     $request->session()->put('loginId', $admin);
-                    return redirect()->route('dashboard')->with('message', 'Login is successfull ! Thank you');
+                    return redirect()->route('dashboard')->with('success', 'Login is successfull ! Thank you');
                 }
                 elseif($admin->role == 0) {
                     $request->session()->put('loginId', $admin);
-                    return redirect()->route('dashboard')->with('message', 'Login is successfull ! Thank you');
+                    return redirect()->route('dashboard')->with('success', 'Login is successfull ! Thank you');
                 }
-            }
-            elseif(empty(Authentication::count())) {
-                return back()->with('error', 'Sorry ! No data found');
             }
             else {
                 return back()->with('error', 'Wrong email or password ! Please try again');
@@ -53,6 +50,6 @@ class AdminContrller extends Controller
     // Logout profile
     public function logout() {
         session()->forget('loginId');
-        return redirect()->route('viewLogin')->with('message', 'Logout is successfull ! Thank you');
+        return redirect()->route('viewLogin')->with('success', 'Logout is successfull ! Thank you');
     }
 }
