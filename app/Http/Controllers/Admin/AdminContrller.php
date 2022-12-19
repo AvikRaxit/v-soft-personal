@@ -38,6 +38,9 @@ class AdminContrller extends Controller
                     return redirect()->route('dashboard');
                 }
             }
+            elseif(empty(Authentication::count())) {
+                return back();
+            }
             else {
                 return back();
             }
