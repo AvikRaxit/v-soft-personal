@@ -18,6 +18,7 @@
 
 	<link href="{{ asset('backend/css/app.css') }}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 
 <body>
@@ -59,5 +60,17 @@
   </div>
   <script src="{{ asset('backend/js/app.js') }}"></script>
   <script src="{{ asset('backend/js/custom.js') }}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<script>
+		@if(Session::has('message'))
+			toastr.options =
+			{
+				"closeButton" : true,
+				"progressBar" : true
+			}
+			toastr.success("{{ session('message') }}");
+		@endif
+  </script>
 </body>
 </html>
