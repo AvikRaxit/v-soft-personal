@@ -22,5 +22,5 @@ Route::prefix('v-soft')->group(function () {
 
     Route::post('storeLogin', [AdminContrller::class, 'storeLogin'])->name('storeLogin');
     Route::get('logout', [AdminContrller::class, 'logout'])->name('logout');
-    Route::get('dashboard', [AdminContrller::class, 'dashboard'])->name('dashboard');
+    Route::get('dashboard', [AdminContrller::class, 'dashboard'])->name('dashboard')->middleware('IsNotLogin');
 });

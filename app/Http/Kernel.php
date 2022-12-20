@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
 
         /* Custom Middleware Creation */
         'IsLogin' => \App\Http\Middleware\IsLogin::class,
+        'IsNotLogin' => \App\Http\Middleware\IsNotLogin::class,
     ];
 }
