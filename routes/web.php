@@ -10,7 +10,6 @@ Route::get('/clear-cache', function () {
     \Artisan::call('view:cache');
     \Artisan::call('view:clear');
 
-    // Alert::success('Cache has been cleared !')->persistent('Close')->autoclose(6000);
     return back();
 });
 
@@ -31,8 +30,8 @@ Route::prefix('v-soft')->middleware('IsLogin')->group(function () {
 
     Route::post('storeLogin', [AdminContrller::class, 'storeLogin'])->name('storeLogin');
     Route::get('logout', [AdminContrller::class, 'logout'])->name('logout');
-    
 });
+
 Route::prefix('v-soft')->middleware(['IsNotLogin'])->group(function () {
     Route::get('dashboard', [AdminContrller::class, 'dashboard'])->name('dashboard');
     Route::get('user', function () {
