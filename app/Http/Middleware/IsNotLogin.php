@@ -17,7 +17,7 @@ class IsNotLogin
     public function handle(Request $request, Closure $next)
     {
         if(!Session::has('loginId')) {
-            return redirect()->route('viewLogin')->with('error', 'Access Denied ! Please Login');
+            return redirect()->route('viewLogin')->with('error', 'Access denied ! Please login');
         }
         return $next($request);
     }

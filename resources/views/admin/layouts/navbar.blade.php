@@ -150,6 +150,8 @@
             <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{route('logout')}}"><i class="align-middle me-1" data-feather="log-in"></i> <span class="align-middle">Log out</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{{url('/clear')}}"><i class="align-middle me-1" data-feather="log-in"></i> <span class="align-middle">Clear Cache</a>
           </div>
         </li>
       </ul>

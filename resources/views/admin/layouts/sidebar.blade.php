@@ -14,7 +14,7 @@
       </li>
       @if (session()->get('loginId')->role == 1)
       <li class="sidebar-item">
-        <a class="sidebar-link" href="pages-profile.html">
+        <a class="sidebar-link" href="{{route('manageUser')}}">
           <i class="align-middle" data-feather="user"></i> <span class="align-middle">User Manage</span>
         </a>
       </li>
