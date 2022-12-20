@@ -17,7 +17,7 @@ class IsLogin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Session::has('loginId') && (route('viewLogin') == $request->route())) {
+        if(Session::has('loginId') && (url('/vSoft/login') == $request->url())) {
             return back()->with('success', 'You Are Already Logged In.');
         }
         return $next($request);

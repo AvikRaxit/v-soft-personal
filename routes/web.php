@@ -9,7 +9,6 @@ Route::get('/clear-cache', function () {
     \Artisan::call('cache:clear');
     \Artisan::call('view:cache');
     \Artisan::call('view:clear');
-
     return back();
 });
 
@@ -19,10 +18,10 @@ Route::get('/', function () {
 });
 
 /*------------------Admin Route-------------------- */
-Route::prefix('v-soft')->middleware('IsLogin')->group(function () {
-    Route::get('/', function () {
+Route::prefix('vSoft')->group(function () {
+    Route::get('login', function () {
         return view('admin.auth.login');
-    })->name('viewLogin');
+    })->name('viewLogin')->middleware('IsLogin');
     
     Route::get('reset-password', function () {
         return view('admin.auth.forgot_password');
@@ -32,7 +31,7 @@ Route::prefix('v-soft')->middleware('IsLogin')->group(function () {
     Route::get('logout', [AdminContrller::class, 'logout'])->name('logout');
 });
 
-Route::prefix('v-soft')->middleware(['IsNotLogin'])->group(function () {
+Route::middleware(['IsNotLogin'])->group(function () {
     Route::get('dashboard', [AdminContrller::class, 'dashboard'])->name('dashboard');
     Route::get('user', function () {
         return "User Management";
