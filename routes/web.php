@@ -4,6 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminContrller;
 
 
+Route::get('/clear-cache', function () {
+    \Artisan::call('config:clear');
+    \Artisan::call('cache:clear');
+    \Artisan::call('view:cache');
+    \Artisan::call('view:clear');
+
+    // Alert::success('Cache has been cleared !')->persistent('Close')->autoclose(6000);
+    return back();
+});
 
 
 Route::get('/', function () {
@@ -11,10 +20,10 @@ Route::get('/', function () {
 });
 
 /*------------------Admin Route-------------------- */
-Route::prefix('v-soft')->group(function () {
+Route::prefix('v-soft')->middleware('IsLogin')->group(function () {
     Route::get('/', function () {
         return view('admin.auth.login');
-    })->name('viewLogin')->middleware('IsLogin');
+    })->name('viewLogin');
     
     Route::get('reset-password', function () {
         return view('admin.auth.forgot_password');
@@ -22,5 +31,11 @@ Route::prefix('v-soft')->group(function () {
 
     Route::post('storeLogin', [AdminContrller::class, 'storeLogin'])->name('storeLogin');
     Route::get('logout', [AdminContrller::class, 'logout'])->name('logout');
-    Route::get('dashboard', [AdminContrller::class, 'dashboard'])->name('dashboard')->middleware('IsNotLogin');
+    
+});
+Route::prefix('v-soft')->middleware(['IsNotLogin'])->group(function () {
+    Route::get('dashboard', [AdminContrller::class, 'dashboard'])->name('dashboard');
+    Route::get('user', function () {
+        return "User Management";
+    });
 });
