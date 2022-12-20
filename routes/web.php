@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminContrller;
 
 
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -13,7 +14,7 @@ Route::get('/', function () {
 Route::prefix('v-soft')->group(function () {
     Route::get('/', function () {
         return view('admin.auth.login');
-    })->name('viewLogin');
+    })->name('viewLogin')->middleware('IsLogin');
     
     Route::get('reset-password', function () {
         return view('admin.auth.forgot_password');
