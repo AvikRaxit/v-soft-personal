@@ -1,7 +1,7 @@
 <nav id="sidebar" class="sidebar js-sidebar">
   <div class="sidebar-content js-simplebar">
     <a class="sidebar-brand" href="{{route('dashboard')}}">
-      <span class="align-middle">Vareli TechSoft</span>
+      <span class="">Vareli TechSoft</span>
     </a>
 
     <ul class="sidebar-nav">

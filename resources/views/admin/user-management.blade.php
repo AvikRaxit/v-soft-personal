@@ -84,6 +84,11 @@
         <table id="example" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
+                    <th>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        </div>
+                    </th>
                     <th>ID#</th>
                     <th>Image</th>
                     <th>Name</th>
@@ -95,6 +100,11 @@
             </thead>
             <tbody>
                 <tr>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        </div>
+                    </td>
                     <td>1</td>
                     <td>Jonas Alexander</td>
                     <td>Developer</td>
@@ -104,6 +114,11 @@
                     <td>$86,500</td>
                 </tr>
                 <tr>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        </div>
+                    </td>
                     <td>2</td>
                     <td>Shad Decker</td>
                     <td>Regional Director</td>
@@ -113,6 +128,11 @@
                     <td>$183,000</td>
                 </tr>
                 <tr>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        </div>
+                    </td>
                     <td>3</td>
                     <td>Michael Bruce</td>
                     <td>Javascript Developer</td>
@@ -122,6 +142,11 @@
                     <td>$183,000</td>
                 </tr>
                 <tr>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        </div>
+                    </td>
                     <td>4</td>
                     <td>Donna Snider</td>
                     <td>Customer Support</td>

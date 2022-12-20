@@ -19,9 +19,8 @@
 	<link href="{{ asset('backend/css/app.css') }}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
 </head>
 
 <body>
@@ -36,9 +35,9 @@
           <div class="col-6 text-start">
             <p class="mb-0">
               @php
-                $mytime = date('d-m-Y');
+                $mytime = date('Y');
               @endphp
-              <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Vareli Techsoft</strong></a> - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong></strong></a>{{$mytime}}&copy;
+              <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Vareli Techsoft Pvt Ltd.</strong></a> - {{$mytime}}&copy;
             </p>
           </div>
           <div class="col-6 text-end">
@@ -67,8 +66,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   
   <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
-  <script>
+  <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+  {{-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> --}}
+	<script>
 		@if(Session::has('success'))
 			toastr.options =
 			{
