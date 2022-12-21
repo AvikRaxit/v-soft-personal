@@ -5,74 +5,60 @@
   <div class="container-fluid p-0">
     <!-- Bootstrap Modal start -->
     <div class="row">
-        <div class="col-1">
-            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                + Add User
+        <div class="col">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="align-middle me-2" data-feather="plus"></i> Add User
             </button>
+            <a href="">
+              <button type="button" class="btn btn-danger">
+                <i class="align-middle me-2" data-feather="trash-2"></i> Delete Selected
+              </button>
+            </a>
         </div>
     </div>
     
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Add Admin or HR</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                  <form>
                     <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Full Name">
                       </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputPassword4">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                      <div class="form-group mt-3">
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Email Address" autocomplete="off">
+                      </div>
+                      <div class="form-group mt-3">
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Enter Password">
                       </div>
                     </div>
 
-                    <div class="form-group">
-                      <label for="inputAddress">Address</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <div class="form-group mt-3">
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Enter Contact Number">
                     </div>
 
-                    <div class="form-group">
-                      <label for="inputAddress2">Address 2</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                    </div>
-
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity">
-                      </div>
-                      <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
+                    <div class="form-row mt-3">
+                      <div class="form-group">
                         <select id="inputState" class="form-control">
-                          <option selected>Choose...</option>
-                          <option>...</option>
+                          <option selected>Choose Role</option>
+                          <option>Admin</option>
+                          <option>HR</option>
                         </select>
                       </div>
-                      <div class="form-group col-md-2">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
+                      <div class="mt-3">
+                        <input class="form-control" type="file" id="formFile">
                       </div>
                     </div>
-
-                    <div class="form-group">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                          Check me out
-                        </label>
-                      </div>
-                    </div>
-                </form>    
+                  </form>    
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-sm btn-success">Submit</button>
             </div>
           </div>
         </div>

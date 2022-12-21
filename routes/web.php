@@ -5,16 +5,6 @@ use App\Http\Controllers\Admin\AdminContrller;
 use App\Http\Controllers\Admin\DashboardContrller;
 
 
-Route::get('/clear', function () {
-    \Artisan::call('config:clear');
-    \Artisan::call('cache:clear');
-    \Artisan::call('view:cache');
-    \Artisan::call('view:clear');
-    \Artisan::call('optimize:clear');
-    return back();
-});
-
-
 Route::get('/home', function () {
     return view('welcome');
 });
@@ -37,6 +27,7 @@ Route::get('reset-password', function () {
 
 /* Dashboard Controller */
 Route::middleware(['IsNotLogin'])->group(function () {
+    Route::get('clear', [DashboardContrller::class, 'clearCacheAll'])->name('clearAll');
     Route::get('dashboard', [DashboardContrller::class, 'dashboard'])->name('dashboard');
     Route::get('user-management', [DashboardContrller::class, 'manageUser'])->name('manageUser');
 });
