@@ -26,9 +26,9 @@ Route::get('reset-password', function () {
 })->name('viewResetPassword');
 
 /* Dashboard Controller */
-Route::middleware(['IsNotLogin'])->group(function () {
+Route::prefix('dashboard')->middleware(['IsNotLogin'])->group(function () {
     Route::get('clear', [DashboardContrller::class, 'clearCacheAll'])->name('clearAll');
-    Route::get('dashboard', [DashboardContrller::class, 'dashboard'])->name('dashboard');
+    Route::get('/', [DashboardContrller::class, 'dashboard'])->name('dashboard');
     Route::get('user-management', [DashboardContrller::class, 'manageUser'])->name('manageUser');
 });
 

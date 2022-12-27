@@ -21,7 +21,7 @@ class CreateAuthenticationsTable extends Migration
             $table->string('phone');
             $table->string('image')->nullable();
             $table->boolean('role');
-            $table->boolean('status');
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }

@@ -3,8 +3,9 @@
 @section('content')
 <main class="content">
   <div class="container-fluid p-0">
+    <h1 class="h3 mb-3">Welcome to <strong>Manage User</strong> Page</h1>
     <!-- Bootstrap Modal start -->
-    <div class="row">
+    <div class="row pt-2">
         <div class="col">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <i class="align-middle me-2" data-feather="plus"></i>Add User
@@ -21,7 +22,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Add Admin or HR</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
