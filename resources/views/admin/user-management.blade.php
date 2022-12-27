@@ -7,11 +7,11 @@
     <div class="row">
         <div class="col">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <i class="align-middle me-2" data-feather="plus"></i> Add User
+              <i class="align-middle me-2" data-feather="plus"></i>Add User
             </button>
             <a href="">
               <button type="button" class="btn btn-danger">
-                <i class="align-middle me-2" data-feather="trash-2"></i> Delete Selected
+                <i class="align-middle me-2" data-feather="trash-2"></i>Delete Selected
               </button>
             </a>
         </div>

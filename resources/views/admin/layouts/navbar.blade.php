@@ -143,7 +143,8 @@
             <i class="align-middle" data-feather="settings"></i>
           </a>
 
-          <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+            <!-- Remove dropdown-toggle from upper a class -->
             <img src="{{ asset('backend/img/avatars/avatar.jpg') }}" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">{{$data->name}}</span>
           </a>
           <div class="dropdown-menu dropdown-menu-end">
