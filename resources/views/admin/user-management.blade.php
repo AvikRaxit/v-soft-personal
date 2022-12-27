@@ -80,7 +80,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Contact No.</th>
-                    <th>Role</th>
+                    <th>Status</th>
                     <th>Action</th>
                 </tr>
             </thead>

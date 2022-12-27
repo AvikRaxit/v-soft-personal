@@ -17,5 +17,6 @@ class Authentication extends Model
         'password',
         'phone',
         'role',
+        'status',
     ];
 }

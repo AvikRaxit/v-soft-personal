@@ -19,7 +19,9 @@ class CreateAuthenticationsTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('phone');
+            $table->string('image')->nullable();
             $table->boolean('role');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
