@@ -1,6 +1,7 @@
 <nav id="sidebar" class="sidebar js-sidebar">
   <div class="sidebar-content js-simplebar">
     <a class="sidebar-brand" href="{{route('dashboard')}}">
+      {{-- <img src="{{asset('backend/img/logo/logo.png')}}" style="float:left;line-height:.8;width:100px" alt="Vareli Tecnac"> --}}
       <span class="">Vareli TechSoft</span>
     </a>
 
