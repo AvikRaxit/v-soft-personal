@@ -29,7 +29,7 @@
     @include('admin.layouts.navbar')
     @yield('content')
     
-    <footer class="footer">
+    {{-- <footer class="footer">
       <div class="container-fluid">
         <div class="row text-muted">
           <div class="col-6 text-start">
@@ -58,7 +58,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> --}}
   </div>
   <script src="{{ asset('backend/js/app.js') }}"></script>
   <script src="{{ asset('backend/js/custom.js') }}"></script>
